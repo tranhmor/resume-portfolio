@@ -1,0 +1,28 @@
+name: 部署到GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: 设置Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '20'
+          
+      - name: 安装依赖
+        run: npm ci
+        
+      - name: 构建
+        run: npm run build
+        
+      - name: 部署
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: out 

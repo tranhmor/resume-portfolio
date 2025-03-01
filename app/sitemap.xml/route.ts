@@ -3,7 +3,7 @@
 
 export async function GET() {
   // 获取当前域名，生产环境使用实际域名
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://xuhaoran-resume.vercel.app/';
   
   // 创建sitemap XML内容
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

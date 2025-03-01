@@ -24,7 +24,7 @@ pnpm dev
 bun dev
 ```
 
-在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看结果。
+在浏览器中打开 [https://xuhaoran-resume.vercel.app/](https://xuhaoran-resume.vercel.app/) 查看结果。
 
 你可以通过修改 `app/page.tsx` 开始编辑页面。页面会随着你的编辑自动更新。
 
