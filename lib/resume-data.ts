@@ -6,7 +6,7 @@ export const resumeData = {
   phone: "+86 18126773996",
   email: "tranhmor@gmail.com",
   github: "https://github.com/tranhmor",
-  blog: "https://github.com/tranhmor/resume-portfolio",
+  blog: "https://github.com/tranhmor",
   location: "广州 广东",
   birthYear: "2001-09",
   
