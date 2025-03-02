@@ -1,8 +1,7 @@
-
 export const resumeData = {
   name: "徐浩然",
   title: "Web前端开发工程师",
-  avatar: "/avatar.jpg",
+  avatar: "/xuhaoran.jpg",
   phone: "+86 18126773996",
   email: "tranhmor@gmail.com",
   github: "https://github.com/tranhmor",

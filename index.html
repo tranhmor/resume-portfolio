@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO优化元标签 -->
+  <title>徐浩然 - 前端开发工程师简历</title>
+  <meta name="description" content="徐浩然，前端开发工程师，1年工作经验，精通React、Vue、Next.js、TypeScript等技术，拥有全栈开发能力和丰富的项目经验。">
+  <meta name="keywords" content="徐浩然,前端开发,React,Vue,Next.js,TypeScript,全栈开发,简历">
+  <meta name="author" content="徐浩然">
+  
+  <!-- 网站索引控制 -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph标签(社交媒体分享优化) -->
+  <meta property="og:title" content="徐浩然 - 前端开发工程师简历">
+  <meta property="og:description" content="前端开发工程师，熟练掌握React、Vue、Next.js等技术栈，1年工作经验，多项大型项目经验。">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://tranhmor.github.io/resume/">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=徐浩然简历">
+  
+  <!-- Twitter卡片标签 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="徐浩然 - 前端开发工程师简历">
+  <meta name="twitter:description" content="前端开发工程师，熟练掌握React、Vue、Next.js等技术栈，1年工作经验，多项大型项目经验。">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=徐浩然简历">
+  
+  <!-- 网站图标 -->
+  <link rel="shortcut icon" href="./app/favicon.ico" type="image/x-icon">
+  
+  <!-- 规范链接，避免重复内容 -->
+  <link rel="canonical" href="https://tranhmor.github.io/resume/">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #4f46e5, #7e5efa);
+      --title-gradient: linear-gradient(135deg, #5344db, #7a70e9);
+      --text-gradient: linear-gradient(90deg, #4338ca, #8b5cf6);
+      --primary-color: #5344db;
+      --primary-light: #7a70e9;
+      --primary-dark: #4338ca;
+      --text-white: #ffffff;
+      --text-dark: #1f2937;
+      --text-light: #4b5563;
+      --text-gray: #6b7280;
+      --bg-white: #ffffff;
+      --bg-gray: #f9fafb;
+      --border-color: #e5e7eb;
+      --red-color: #e53e3e;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      color: var(--text-dark);
+      line-height: 1.5;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    
+    /* A4 页面设置 */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 20px;
+      background: white;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* 打印媒体查询 */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      
+      body {
+        padding: 0;
+        background: white;
+      }
+      
+      .page {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+      }
+      
+      .no-print {
+        display: none;
+      }
+      
+      /* 打印时头部降级样式 */
+      .header {
+        background: var(--primary-color) !important;
+        background-image: none !important;
+        color: white;
+      }
+      
+      .header::after {
+        display: none;
+      }
+      
+      /* 打印时卡片标题降级样式 */
+      .card-header {
+        color: var(--primary-dark) !important;
+        background: rgba(116, 99, 238, 0.1) !important;
+        background-image: none !important;
+        border-left: 4px solid var(--primary-color);
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+      }
+      
+      .card-header::before {
+        display: none;
+      }
+      
+      /* 打印时按钮和其他渐变元素降级 */
+      [style*="background-image"] {
+        background-image: none !important;
+      }
+      
+      /* 确保文本在打印时清晰可见 */
+      .skill-number {
+        color: var(--primary-dark) !important;
+      }
+      
+      .bullet-item::before {
+        background-color: var(--primary-dark) !important;
+        background-image: none !important;
+      }
+      
+      .edu-card {
+        background-color: #fff !important;
+        box-shadow: none !important;
+        /* border: 1px solid #e5e7eb !important; */
+      }
+      
+      .other-item::before {
+        background-color: var(--red-color) !important;
+      }
+      
+      /* 打印时头像样式 */
+      .avatar {
+        border: 2px solid white !important;
+      }
+    }
+    
+    /* 头部样式 */
+    .header {
+      background: var(--primary-gradient);
+      color: white;
+      padding: 8px 25px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: rotate(30deg);
+      pointer-events: none;
+    }
+    
+    /* 新的头部内容布局 */
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      flex-wrap: nowrap;
+      margin-top: 2px;
+    }
+    
+    /* 头像容器样式 */
+    .avatar-container {
+      flex: 0 0 auto;
+      width: 90px;
+    }
+    
+    /* 头像样式 */
+    .avatar {
+      width: 90px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 4px;
+      /* border: 2px solid rgba(255, 255, 255, 0.8); */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 右侧信息容器 */
+    .header-info {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    
+    .name {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .basic-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13.5px;
+    }
+    
+    .contact-item {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .contact-item i {
+      margin-right: 5px;
+    }
+    
+    /* 卡片容器 */
+    .card-container {
+      flex: 1;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    /* 卡片样式 */
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      border: 1px solid rgba(229, 231, 235, 0.5);
+    }
+    
+    .card-header {
+      background: rgba(116, 99, 238, 0.08);
+      padding: 6px 16px;
+      font-size: 16px;
+      position: relative;
+      font-weight: bold;
+      background-image: linear-gradient(to right, rgba(116, 99, 238, 0.15), rgba(138, 120, 246, 0.05));
+      border-bottom: 1px solid rgba(116, 99, 238, 0.1);
+    }
+    
+    .card-header::after {
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 30px;
+      height: 100%;
+      background-color: white;
+      transform: skewX(-20deg);
+    }
+    
+    /* 为卡片标题添加文字渐变效果 */
+    .card-header {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: var(--text-gradient);
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* 为卡片标题添加背景盒子 */
+    .card-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, rgba(116, 99, 238, 0.1), rgba(138, 120, 246, 0.05));
+      z-index: -1;
+      border-left: 4px solid var(--primary-color);
+    }
+    
+    .card-body {
+      padding: 14px;
+    }
+    
+    /* 工作经验 */
+    .work-item {
+      margin-bottom: 8px;
+    }
+    
+    .work-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    
+    .company {
+      font-weight: bold;
+      font-size: 16px;
+      color: var(--primary-dark);
+    }
+    
+    .position {
+      font-weight: normal;
+      font-size: 14px;
+      margin-left: 8px;
+      color: var(--text-light);
+    }
+    
+    .work-duration {
+      font-size: 14px;
+      color: var(--text-gray);
+    }
+    
+    .work-description {
+      font-size: 14px;
+      margin-top: 5px;
+      line-height: 1.6;
+    }
+    
+    /* 项目经验 */
+    .project {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed rgba(203, 213, 225, 0.5);
+    }
+    
+    .project:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    
+    .project-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: var(--primary-dark);
+    }
+    
+    .project-position {
+      font-size: 14px;
+      margin-left: 8px;
+      color: var(--text-light);
+    }
+    
+    .project-duration {
+      font-size: 14px;
+      color: var(--text-gray);
+    }
+    
+    .project-tech {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+    
+    .project-description {
+      font-size: 14px;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    
+    .bullet-list {
+      padding-left: 18px;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+    
+    .bullet-item {
+      margin-bottom: 6px;
+      line-height: 1.5;
+      position: relative;
+    }
+    
+    .bullet-item::before {
+      content: "•";
+      color: var(--primary-color);
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      left: -12px;
+    }
+    
+    /* 教育经历 */
+    .edu-section {
+      margin-bottom: 20px;
+    }
+    
+    .edu-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    
+    .edu-card {
+      background: var(--bg-gray);
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .edu-left {
+      flex: 1;
+    }
+    
+    .edu-right {
+      text-align: right;
+      color: var(--text-gray);
+    }
+    
+    .university {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .major {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+    
+    .degree {
+      display: inline-block;
+      padding: 2px 8px;
+      background-color: rgba(116, 99, 238, 0.1);
+      border-radius: 4px;
+      font-size: 12px;
+      color: var(--primary-dark);
+      margin-left: 5px;
+    }
+    
+    .edu-duration {
+      color: var(--text-gray);
+      font-size: 14px;
+    }
+    
+    /* 技能部分 */
+    .skill-section {
+      margin-bottom: 12px;
+    }
+    
+    .skill-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .skill-title {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--primary-color);
+    }
+    
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .skill-item {
+      font-size: 14px;
+      display: flex;
+      align-items: baseline;
+    }
+    
+    .skill-number {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-right: 6px;
+      display: inline-block;
+      min-width: 18px;
+    }
+    
+    /* 其他项目 */
+    .other-section {
+      margin-top: 20px;
+    }
+    
+    .other-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    
+    .other-item {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .other-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--red-color);
+    }
+    
+    /* 工具栏 */
+    .toolbar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    
+    .toolbar button {
+      background: var(--primary-gradient);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .toolbar button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    /* 关于我卡片样式 */
+    .about-me-section {
+      margin-top: 15px;
+    }
+    
+    .about-me-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .fun-fact {
+      background: linear-gradient(to right, rgba(116, 99, 238, 0.08), rgba(116, 99, 238, 0.02));
+      border-radius: 6px;
+      padding: 10px 15px;
+      position: relative;
+      font-size: 14px;
+    }
+    
+    .fun-fact::before {
+      content: "👉";
+      margin-right: 10px;
+    }
+    
+    .programming-joke {
+      font-style: italic;
+      color: var(--text-light);
+      border-left: 3px solid var(--primary-light);
+      padding-left: 12px;
+      margin: 10px 0;
+    }
+    
+    .emoji-bullet {
+      margin-right: 8px;
+    }
+    
+    /* 页脚样式 */
+    .page-footer {
+      margin-top: auto;
+      padding: 15px 25px;
+      border-top: 1px solid var(--border-color);
+      font-size: 12px;
+      color: var(--text-gray);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-right a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .footer-right a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+    
+    /* 页码样式 */
+    .page-number {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 10px;
+      color: var(--text-gray);
+    }
+  </style>
+  
+  <!-- 结构化数据(Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "徐浩然",
+      "url": "https://tranhmor.github.io/resume/",
+      "jobTitle": "前端开发工程师",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "前端开发工程师"
+      },
+      "description": "前端开发工程师，熟练掌握React、Vue、Next.js等技术栈，有全栈开发经验",
+      "skills": "React, Vue, Next.js, TypeScript, Node.js, Nest.js, Strapi",
+      "email": "tranhmor@gmail.com",
+      "telephone": "18126773996",
+      "sameAs": [
+        "https://github.com/tranhmor"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <!-- 第一页 -->
+  <div class="page">
+    <!-- 个人信息 -->
+    <header class="header">
+      <div class="header-content">
+        <div class="avatar-container">
+          <img src="./public/xuhaoran.jpg" alt="个人照片" class="avatar">
+        </div>
+        <div class="header-info">
+          <h1 class="name">徐浩然</h1>
+          <div class="basic-info">
+            <span>男 | 23岁</span>
+            <span>1年工作经验</span>
+            <span>前端开发工程师</span>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>18126773996</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              tranhmor@gmail.com
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              github.com/tranhmor
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- 卡片容器 -->
+    <div class="card-container">
+      <!-- 工作经历 -->
+      <div class="card">
+        <div class="card-header">工作经历</div>
+        <div class="card-body">
+          <div class="work-item">
+            <div class="work-header">
+              <div>
+                <span class="company">广州安点科技有限公司</span>
+                <span class="position">全栈工程师</span>
+              </div>
+              <div class="work-duration">2023.12-至今</div>
+            </div>
+            <div class="work-description">
+              负责公司多个核心产品的前端架构设计与开发，专注于高性能Web应用与AI技术集成。主要工作包括：优化用户界面与交互体验，提升产品转化率与留存；设计高效数据处理方案，实现复杂数据可视化；集成多种AI大模型API，开发大模型应用功能；参与技术选型与基础设施建设，推动前端工程化实践。
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 项目经历 -->
+      <div class="card">
+        <div class="card-header">项目经历</div>
+        <div class="card-body">
+          <div class="project">
+            <div class="project-header">
+              <div>
+                <span class="project-name">AICoin</span>
+                <span class="project-position">前端开发</span>
+              </div>
+              <div class="project-duration">2023.12-至今</div>
+            </div>
+            <div class="project-tech">
+              技术栈：React + Next.js + Shadcn UI + TailwindCSS
+            </div>
+            <div class="project-description">
+              AICoin作为全球Web3行情分析工具的领跑者，致力于通过 AI 驱动、多终端协同、社区化生态 三大核心能力，为全球用户提供 实时行情分析、智能投资决策、去中心化社交互动 的一站式解决方案。
+            </div>
+            <ul class="bullet-list">
+              <li class="bullet-item">参与VIP订阅体系前端架构设计，重构实现VIP落地页开发，首屏LCP≤800ms，订阅转化率提升18%，营收增长50%。</li>
+              <li class="bullet-item">设计快讯板块高性能事件日历数据 Hook，采用LRU缓存策略与按需加载机制，减少重复请求，实现按月份分区存储与快速检索，支持日/周/月视图无缝切换，用户日均停留时长增加18分钟。</li>
+              <li class="bullet-item">封装基于ECharts的实时行情趋势图组件，实现分钟级数据更新与万级数据点流畅渲染，受多个核心模块复用，有效节省开发资源。</li>
+              <li class="bullet-item">迁移PC端自定义社区指标板块至Web端，包括k线行情、AIScript自研脚本代码渲染，引流PC客户端下载，社区生态活跃度显著增长，用户生成自定义指标数达5w+。</li>
+              <li class="bullet-item">设计全局Metadata生成器，标准化OG/Twitter协议与多语言Canonical管理，推动核心页面搜索排名提升40%，Lighthouse SEO平均分≥95。</li>
+            </ul>
+          </div>
+          
+          <div class="project">
+            <div class="project-header">
+              <div>
+                <span class="project-name">ITalent</span>
+                <span class="project-position">项目主导者 & 全栈开发</span>
+              </div>
+              <div class="project-duration">2023.12-至今</div>
+            </div>
+            <div class="project-tech">
+              技术栈：React + Next.js + Ant Design + TailwindCSS + Strapi + MySql + MongoDB
+            </div>
+            <div class="project-description">
+              面向B端的SaaS服务平台企业级OA系统，集成人力资源管理、招聘管理、组织架构管理、即时通讯、考勤管理、人事管理和审批流程等多个业务板块于一体，为企业提供全方位的数字化人才管理解决方案。
+            </div>
+            <ul class="bullet-list">
+              <li class="bullet-item">主导核心业务模块的数据库设计，利用Strapi提供接口管理功能，实现数据的快速映射和业务逻辑的高效实现。</li>
+              <li class="bullet-item">基于MongoDB及封装Antd组件实现灵活的自定义表单功能，支持用户灵活定义表单字段，提升人事管理模块的可配置性和扩展性。</li>
+              <li class="bullet-item">集成Tecent Map SDK实现员工考勤的定位打卡功能，结合地理围栏技术，提高考勤数据的准确性和可靠性。</li>
+              <li class="bullet-item">接入OpenAI API，应用最新的 AI 技术实现自动解析简历、岗位需求生成等功能，优化招聘流程，提高招聘效率。</li>
+              <li class="bullet-item">使用Socket.io构建即时通讯模块，实现基于组织架构的自动建群和消息通知，提升企业内部的沟通效率。</li>
+              <li class="bullet-item">结合html2canvas技术，支持导出组织架构图为图片或文件格式，方便分享和存档，提升信息展示的灵活性。</li>
+              <li class="bullet-item">实现Excel表单的自定义导出功能，生成满足用户特定需求的报表。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 第二页 -->
+  <div class="page">
+    <div class="card-container" style="padding-top: 20px;">
+      <!-- 项目经历（续） -->
+      <div class="card">
+        <!-- <div class="card-header">项目经历（续）</div> -->
+        <div class="card-body">
+          <!-- <div class="project">
+            <div class="project-header">
+              <div>
+                <span class="project-name">ITalent（续）</span>
+                <span class="project-position">项目主导者 & 全栈开发</span>
+              </div>
+            </div>
+            <ul class="bullet-list">
+            </ul>
+          </div> -->
+          
+          <div class="project">
+            <div class="project-header">
+              <div>
+                <span class="project-name">管理中枢系统</span>
+                <span class="project-position">前端开发</span>
+              </div>
+              <div class="project-duration">2023.12-至今</div>
+            </div>
+            <div class="project-tech">
+              技术栈：Vue + Element UI + Qiankun
+            </div>
+            <div class="project-description">
+              支撑全球用户、日均千万级数据操作的SaaS级管理中枢，涵盖用户权限、数据监控、策略审核、行情爬取等12个核心模块。
+            </div>
+            <ul class="bullet-list">
+              <li class="bullet-item">设计配置化页面引擎，通过JSON Schema协议实现60%+管理页面自动生成，需求交付效率提升3倍。</li>
+              <li class="bullet-item">构建RBAC+ABAC混合权限体系，开发动态路由加载。</li>
+              <li class="bullet-item">日常维护及迭代优化会员、行情、快讯、资讯管理等多个模块的后台管理页面。</li>
+            </ul>
+          </div>
+          
+          <div class="project">
+            <div class="project-header">
+              <div>
+                <span class="project-name">无聊</span>
+                <span class="project-position">前端开发 & 后端开发</span>
+              </div>
+              <div class="project-duration">2023.12-至今</div>
+            </div>
+            <div class="project-tech">
+              技术栈：React + Nest.js + ScyllaDB + Elasticsearch + Socket.io + Redis
+            </div>
+            <div class="project-description">
+              结合即时通讯与AI技术，为用户提供类似微信的社交体验，支持个人聊天、群组话题讨论和好友关系管理。内置Claude、Gemini、OpenAI等主流大模型，能够实现内容生成、数据分析等智能服务。
+            </div>
+            <ul class="bullet-list">
+              <li class="bullet-item">参与后端服务重构，集成Redis缓存机制，优化数据存取性能，降低数据库压力，提高系统的响应速度和稳定性。</li>
+              <li class="bullet-item">集成Nest.js官方日志打印功能，完善日志记录，便于调试和监控；接入Swagger生成接口文档，规范API接口，提升团队协作和维护效率。</li>
+              <li class="bullet-item">优化图片和文件的上传流程，提升上传速度和可靠性，支持大文件的断点续传和多线程上传，改善用户体验。</li>
+              <li class="bullet-item">集成 OpenAI、Claude、Gemini 等 AI 服务，提供智能回复、内容生成和数据分析等功能，增强聊天机器人和智能助手的能力。</li>
+              <li class="bullet-item">实现群成员列表的增删改查功能，支持批量操作和权限控制，提升群组管理的便捷性；实现群公告的增删改查服务，支持公告的富文本编辑和发送通知，增强群信息传达效率。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 个人优势 -->
+      <div class="card">
+        <div class="card-header">个人优势</div>
+        <div class="card-body">
+          <div class="skill-section">
+            <div class="skill-title">• 前端技术</div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-number">1.</span> 熟练使用 React，掌握 Hooks 性能优化；熟悉使用 Vue.js</div>
+              <div class="skill-item"><span class="skill-number">2.</span> 掌握 Next.js（SSR 服务端渲染）</div>
+              <div class="skill-item"><span class="skill-number">4.</span> 熟练使用 TailwindCSS、TypeScript、HTML\CSS\JavaScript</div>
+              <div class="skill-item"><span class="skill-number">5.</span> 熟悉 Shadcn、Headless UI、Ant Design、Element UI 组件库</div>
+            </div>
+          </div>
+          
+          <div class="skill-section">
+            <div class="skill-title">• 工程化</div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-number">1.</span> 熟悉项目脚手架的搭建；熟练使用 Git 进行代码协作</div>
+              <div class="skill-item"><span class="skill-number">2.</span> 了解 CI/CD 流水线设计（结合 GitLab Runner 和 Docker 实现自动化部署）</div>
+            </div>
+          </div>
+          
+          <div class="skill-section">
+            <div class="skill-title">• 全栈开发</div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-number">1.</span> 具备多端应用开发经验（使用 Taro 开发小程序）</div>
+              <div class="skill-item"><span class="skill-number">2.</span> 拥有全栈 Node.js 开发经验（Nest.js 微服务架构、Strapi 快速开发）</div>
+            </div>
+          </div>
+          
+          <div class="skill-section">
+            <div class="skill-title">• 其他技能</div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-number">1.</span> 熟悉 HTTP、TCP/IP 协议；了解浏览器工作原理，熟悉常用的跨域解决方案</div>
+              <div class="skill-item"><span class="skill-number">2.</span> 了解前端监控体系的搭建（使用 Sentry 和埋点方案）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 第三页 - 教育经历、其他维度和关于我 -->
+  <div class="page">
+    <div class="card-container" style="padding-top: 20px;">
+      <!-- 教育经历 -->
+      <div class="card">
+        <div class="card-header">教育经历</div>
+        <div class="card-body">
+          <div class="edu-cards">
+            <div class="edu-card">
+              <div class="edu-left">
+                <div class="university">华南农业大学</div>
+                <div class="major">信息管理与信息系统 <span class="degree">本科</span></div>
+              </div>
+              <div class="edu-right">
+                <div class="edu-duration">2020.09 - 2024.06</div>
+              </div>
+            </div>
+            
+            <div class="edu-card">
+              <div class="edu-left">
+                <div class="university">香港科技大学（广州）</div>
+                <div class="major">优秀营员 <span class="degree">红鸟营</span></div>
+              </div>
+              <div class="edu-right">
+                <div class="edu-duration">2024.06 - 2024.07</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 其他维度 -->
+      <div class="card">
+        <div class="card-header">其他维度</div>
+        <div class="card-body">
+          <div class="other-list">
+            <div class="other-item">美国大学生数学建模竞赛特等奖 Finalist (2%)</div>
+            <div class="other-item">大创省级立项 - 基于多模态数据的农业知识图谱构建及应用研发</div>
+            <div class="other-item">Moledao Web3 二期优秀学员</div>
+            <div class="other-item">英语证书 CET-6</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 新增：关于我（风趣内容） -->
+    <div class="card">
+      <div class="card-header">关于我的神奇技能</div>
+      <div class="card-body">
+        <div class="about-me-content">
+          <div class="fun-fact">
+            我热爱篮球🏀我写的代码像库里投三分 —— 有时候看起来出手姿势很离谱，但总能划出完美弧线命中需求！
+          </div>
+          
+          <div class="fun-fact">
+            我热爱足球⚽️当我的代码开始报错时，我会像防守梅西一样专注 —— 你永远不知道bug会从哪个方向突破
+          </div>
+          
+          <div class="programming-joke">
+            "为什么程序员喜欢用暗色主题？"<br>
+            "因为亮光会暴露代码里的泪痕"
+          </div>
+          
+          <div class="fun-fact">
+            <span class="emoji-bullet">🎧</span> 我的耳机里不是白噪音，是代码BGM——当播放R&B时我在写优雅代码，听到摇滚时可能在暴力调试
+          </div>
+          
+          <div class="fun-fact">
+            <span class="emoji-bullet">📸</span> 摄影教会我写代码：构图要对齐网格就像代码要符合规范，追光比找最佳拍摄角度就像寻找最优算法
+          </div>
+          
+          <div class="fun-fact">
+            <span class="emoji-bullet">✈️</span> 最近在挑战用代码复现旅行体验 —— 当我的console.log出现「404 Not Found」时，那是我在数字世界探险的脚印
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="page-footer">
+      <div class="footer-left">
+        © 2024 徐浩然 - 用代码构建未来的前端工程师
+      </div>
+      <div class="footer-right">
+        在线简历: <a href="https://xuhaoran-resume.vercel.app/" target="_blank">xuhaoran-resume.vercel.app</a>
+      </div>
+    </div>
+    
+    <!-- 页码 -->
+    <!-- <div class="page-number">3/3</div> -->
+  </div>
+  
+  <!-- 工具栏 -->
+  <div class="toolbar no-print">
+    <button id="printBtn">打印简历</button>
+  </div>
+  
+  <!-- 添加打印预览功能改进 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 检查头像是否加载失败，如果失败则使用占位图
+      var avatarImg = document.querySelector('.avatar');
+      if (avatarImg) {
+        avatarImg.onerror = function() {
+          this.src = 'https://via.placeholder.com/90x110?text=徐浩然';
+        };
+      }
+      
+      // 添加打印按钮事件监听
+      var printBtn = document.getElementById('printBtn');
+      if (printBtn) {
+        printBtn.addEventListener('click', function() {
+          // 打印前可以做额外处理，如降级样式
+          console.log('准备打印...');
+          setTimeout(function() {
+            window.print();
+          }, 100);
+        });
+      }
+    });
+  </script>
+</body>
+</html> 

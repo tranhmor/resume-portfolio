@@ -1,19 +1,21 @@
-// import Image from 'next/image';
+import Image from 'next/image';
 import { FaEnvelope, FaGlobe, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 // import { SiGithub } from 'react-icons/si';
 import { resumeData } from "@/lib/resume-data";
 
 export default function Header() {
   return (
-      <section className="w-full bg-gradient-to-br from-purple-50 to-indigo-100 backdrop-blur-sm p-8 rounded-l-xl ">
+      <section className="w-full bg-gradient-to-br from-purple-50 to-indigo-100 backdrop-blur-sm p-6 rounded-l-xl ">
         <div className="flex flex-col items-center mb-4">
-          <div className="relative w-40 h-40 mb-4 overflow-hidden rounded-full border-4 border-white shadow-md">
-            {/* <Image
+          <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full bg-white border-4 border-white shadow-md">
+            <Image
               src={resumeData.avatar}
               alt="个人照片"
               fill
-              className="object-cover"
-            /> */}
+              priority
+              sizes="(max-width: 768px) 100vw, 176px"
+              className="object-contain object-center scale-110"
+            />
           </div>
           <h1 className="text-2xl font-bold text-gray-800">{resumeData.name}</h1>
           <p className="text-indigo-600 font-medium">{resumeData.title}</p>

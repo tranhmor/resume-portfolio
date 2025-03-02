@@ -203,7 +203,7 @@ export default function FloatingPdfButton() {
     if (1) {
       // 显示"暂不开放"提示
       const noticeToast = document.createElement('div');
-      noticeToast.innerText = '暂不开放导出简历功能';
+      noticeToast.innerText = '暂不开放导出简历';
       noticeToast.style.position = 'fixed';
       noticeToast.style.top = '20px';
       noticeToast.style.left = '50%';
